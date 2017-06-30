@@ -74,7 +74,7 @@ Provision a __Ubuntu 16__ based virtual machine with essential tools and softwar
 
 ### Running Oracle locally
 - Oracle XE is installed as a docker image. 
-- Start and stop shell scripts are provided at Desktop/oracle
+- Start and stop shell scripts are provided at _/opt/shortcuts_
 - `./oracle-start.sh` to start Oracle server
 - `./oracle-stop.sh` to stop Oracle server
 
@@ -87,13 +87,13 @@ Provision a __Ubuntu 16__ based virtual machine with essential tools and softwar
 
 
 ### Running IBM MQ Explorer locally
-- MQ Explorer 9.0 is installed and can be remotely connected to the local docker MQ conatiner and to remote MQ servers. Use user id _mqm_. No password is required.
+- If MQ Explorer 9.0 is installed, it can be remotely connect to the local docker MQ conatiner and to remote MQ servers. Use user id _mqm_. No password is required.
 - [Setup instruction](ftp://public.dhe.ibm.com/software/integration/support/supportpacs/individual/ms0t_readme_9.0.txt)
 
 -------
 
 ### Optional Docker images
-You may uncomment the optional docker images section in setup.sh to install 
+You may install additional docker images. Uncomment the last section in setup.sh to install
 - [Jenkins](https://hub.docker.com/_/jenkins/)
 - [Sonar Qube](https://hub.docker.com/r/library/sonarqube/)
 - [Mongo DB](https://hub.docker.com/r/library/mongo/)
