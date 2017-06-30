@@ -30,7 +30,6 @@ Provision a __Ubuntu 16__ based virtual machine with essential tools and softwar
 7. [SoapUI 5.3](https://www.soapui.org/)
 8. [Eclipse JEE Oxygen](https://www.eclipse.org/downloads/)
 9. [IntelliJ IDEA CE](https://www.jetbrains.com/idea/features/)
-9. [Pivotal tcServer 3.1.8](https://tcserver.docs.pivotal.io/docs/index.html)
 10. [Tomcat 8](https://tomcat.apache.org/tomcat-8.0-doc/index.html)
 11. Oracle 11 XE as a docker container
 12. IBM Websphere MQ 7.5 server installed in a docker image
@@ -45,18 +44,22 @@ Provision a __Ubuntu 16__ based virtual machine with essential tools and softwar
 3. [Terminator super unix terminal](https://gnometerminator.blogspot.com/p/introduction.html)
 4. [Filezilla FTP client](https://filezilla-project.org/index.php)
 5. Virtualbox guest additions
-6. [Bleachbit](https://www.bleachbit.org/)
-7. [Gedit](https://wiki.gnome.org/Apps/Gedit)
+6. [Gedit](https://wiki.gnome.org/Apps/Gedit)
 
 > Explore Ubuntu Software manager and install/uninstall as required
 
-## Setup VM
+## Prepare VM creation
 - Git clone this project
+### Customize Vagrantfile
 - Update the VM name, if required in _Vagrantfile_
 - Customize vagrant configuration as required
-- If required, fix broken download urls in _setup.sh_
-- Update setup.sh with the actual file name against the readonly variable _MQ\_EXPLORER\_FILE\_NAME_
-- Comment unwanted sections in setup.sh
+
+### Customize setup.sh
+- Verify and fix broken urls
+- If IBM MQ Explorer is required, update the actual file name against the readonly variable _MQ\_EXPLORER\_FILE\_NAME_
+- Review and remove/add sections based on your team requirements
+
+## Create VM
 - Run `vagrant up`. It may take upto an hour on a LAN connection to finish. So sit back and relax.
 - Later `vagrant halt` to shutdown the VM
 - Go to VM settings > Display. Disable 3D acceleration

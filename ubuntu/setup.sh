@@ -3,12 +3,10 @@ readonly DOCKER_COMPOSE_VERSION=1.14.0
 readonly ATOM_VERSION=1.18.0
 readonly MAVEN_VERSION=3.3.9
 readonly SOAPUI_VERSION=5.3.0
-readonly TCSERVER_VERSION=3.1.8
 readonly TOMCAT_VERSION=8.0.44
 readonly ECLIPSE_VERSION=eclipse-jee-oxygen-R-linux-gtk-x86_64
 readonly INTELIJ_IDEA_VERSION=ideaIC-2017.1.3
 readonly MQ_EXPLORER_FILE_NAME=ms0t_mqexplorer_9001_linux_x86_64
-
 
 # Pre installation
 echo "Started Pre installation"
@@ -106,11 +104,6 @@ sudo tar -xzf $INTELIJ_IDEA_VERSION.tar.gz
 sudo rm /opt/$INTELIJ_IDEA_VERSION.tar.gz
 echo "Installed IntelliJ IDEA"
 
-# Pivotal tcServer
-echo "Installing Pivotal tcServer"
-sudo tar -zxvf /vagrant/pivotal-tc-server-developer-$TCSERVER_VERSION.RELEASE.tar.gz -C /opt/
-echo "Installed Pivotal tcServer"
-
 # Tomcat
 echo "Installing Tomcat"
 cd /opt/ && sudo wget http://supergsego.com/apache/tomcat/tomcat-8/v$TOMCAT_VERSION/bin/apache-tomcat-$TOMCAT_VERSION.tar.gz
@@ -121,18 +114,14 @@ echo "Installed Tomcat"
 # Oracle XE
 echo "Installing Oracle XE"
 docker stop local-oracle
-sudo rm -Rf /home/vagrant/Desktop/oracle
 docker run --name local-oracle -d -p 49160:22 -p 1521:1521 wnameless/oracle-xe-11g
 docker stop local-oracle
-sudo tar -xvf /vagrant/oracle.tar -C /home/vagrant/Desktop/
-sudo chown vagrant:vagrant /home/vagrant/Desktop/oracle/oracle*.sh
+sudo tar -xvf /vagrant/oracle.tar -C /opt/shortcuts/
 echo "Installed Oracle XE"
 
 # IBM Websphere MQ 
 echo "Installing IBM Websphere MQ"
-sudo rm -Rf /home/vagrant/Desktop/mq
-sudo tar -xvf /vagrant/mq.tar -C /home/vagrant/Desktop/
-sudo chown vagrant:vagrant /home/vagrant/Desktop/mq/MYQM*.sh
+sudo tar -xvf /vagrant/mq.tar -C /opt/shortcuts/
 echo "Installed IBM Websphere MQ"
 
 # IBM MQ Explorer

@@ -19,5 +19,5 @@
 --------------------------------------------------------------------
 
 Following VM environments are available:
-- [Ubuntu 16 Readme](https://github.com/anair-it/JEE-provision-local-development-environment/ubuntu/README.md)
+- [Ubuntu 16 Readme](https://github.com/anair-it/JEE-provision-local-development-environment/blob/master/ubuntu/README.md)
 - Centos 7 - COMING SOON
