@@ -1,6 +1,7 @@
 # Provision Java EE local development environment
-- Onboard a Java developer/QA in minutes.
-- Provision a local development environment with essential tools and software for a Java full stack developer/QA on a Windows PC. The same can be shared with a team so to maintain a consistent local environment setup.
+- Onboard a Java developer/QA in few minutes.
+- Quickly provision a local development environment with essential tools and software for a Java full stack developer/QA on a Windows PC. 
+- Share configuration in the team to maintain a consistent local environment setup.
 
 ## Hardware pre-requisites
 1. Host machine RAM: >= 8GB
