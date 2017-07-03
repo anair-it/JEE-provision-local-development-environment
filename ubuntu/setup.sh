@@ -3,7 +3,7 @@ readonly DOCKER_COMPOSE_VERSION=1.14.0
 readonly ATOM_VERSION=1.18.0
 readonly MAVEN_VERSION=3.3.9
 readonly SOAPUI_VERSION=5.3.0
-readonly TOMCAT_VERSION=8.0.44
+readonly TOMCAT_VERSION=8.0.45
 readonly ECLIPSE_VERSION=eclipse-jee-oxygen-R-linux-gtk-x86_64
 readonly INTELIJ_IDEA_VERSION=ideaIC-2017.1.3
 readonly MQ_EXPLORER_FILE_NAME=ms0t_mqexplorer_9001_linux_x86_64
@@ -14,7 +14,7 @@ sudo apt-get update
 sudo add-apt-repository -y ppa:webupd8team/java
 sudo sh -c 'echo "deb http://archive.getdeb.net/ubuntu xenial-getdeb apps" >> /etc/apt/sources.list.d/getdeb.list'
 sudo wget -q -O - http://archive.getdeb.net/getdeb-archive.key | sudo apt-key add -
-sudo apt-get install -y git wget apt-transport-https ca-certificates curl software-properties-common terminator gdebi filezilla rabbitvcs* libgconf2-4 libnss3-1d libxss1
+sudo apt-get install -y git wget apt-transport-https ca-certificates curl software-properties-common terminator gdebi filezilla rabbitvcs* libgconf2-4 libnss3-1d libxss1 vsftpd
 sudo apt-get update
 echo "Ended Pre installation"
 
