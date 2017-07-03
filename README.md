@@ -20,7 +20,7 @@
 --------------------------------------------------------------------
 
 Following VM environments are available:
-- [Ubuntu 16](https://github.com/anair-it/JEE-provision-local-development-environment/blob/master/ubuntu/README.md)
-- [Centos 7 Desktop](https://github.com/anair-it/JEE-provision-local-development-environment/tree/master/centos7-desktop/README.md)
-- [Centos 7 Minimal](https://github.com/anair-it/JEE-provision-local-development-environment/tree/master/centos7-minimal/README.md)
+- [Ubuntu 16](https://github.com/anair-it/JEE-provision-local-development-environment/tree/master/ubuntu)
+- [Centos 7 Desktop](https://github.com/anair-it/JEE-provision-local-development-environment/tree/master/centos7-desktop)
+- [Centos 7 Minimal](https://github.com/anair-it/JEE-provision-local-development-environment/tree/master/centos7-minimal)
 
