@@ -7,7 +7,7 @@ Provision a __Ubuntu 16__ based virtual machine with essential tools and softwar
 3. CPU: >= 4 cores
 4. Enable 64 bit virtualization in PC. By default this is turned off.
     - Restart PC
-	- On boot up, open BIOS. Hold the required Fn buttont till the BIOS comes up.
+	- On boot up, open BIOS. Hold the required Fn button till the BIOS comes up.
 	- Go to Advanced options > Processor Options > Intel Virtualization technology
 	- Enable this feature
 	- Start windows
