@@ -16,6 +16,7 @@ sudo sh -c 'echo "deb http://archive.getdeb.net/ubuntu xenial-getdeb apps" >> /e
 sudo wget -q -O - http://archive.getdeb.net/getdeb-archive.key | sudo apt-key add -
 sudo apt-get install -y git wget apt-transport-https ca-certificates curl software-properties-common terminator gdebi filezilla rabbitvcs* libgconf2-4 libnss3-1d libxss1 vsftpd
 sudo apt-get update
+sudo mkdir -p /opt/shortcuts
 echo "Ended Pre installation"
 
 # Google Chrome
@@ -125,18 +126,19 @@ sudo tar -xvf /vagrant/mq.tar -C /opt/shortcuts/
 echo "Installed IBM Websphere MQ"
 
 # IBM MQ Explorer
-echo "Installing IBM MQ Explorer"
-sudo mkdir /opt/MQ_Explorer
-sudo tar -zxvf /vagrant/$MQ_EXPLORER_FILE_NAME.tar.gz -C /opt/MQ_Explorer && cd /opt/MQ_Explorer
-sudo sed -i 's/LICENSE_ACCEPTED=FALSE/LICENSE_ACCEPTED=TRUE/g' silent_install.resp 
-sudo ./Setup.bin -f silent_install.resp
-cd .. && sudo rm -Rf MQ_Explorer
-echo "Installed IBM MQ Explorer"
+#echo "Installing IBM MQ Explorer"
+#sudo mkdir /opt/MQ_Explorer
+#sudo tar -zxvf /vagrant/$MQ_EXPLORER_FILE_NAME.tar.gz -C /opt/MQ_Explorer && cd /opt/MQ_Explorer
+#sudo sed -i 's/LICENSE_ACCEPTED=FALSE/LICENSE_ACCEPTED=TRUE/g' silent_install.resp 
+#sudo ./Setup.bin -f silent_install.resp
+#cd .. && sudo rm -Rf MQ_Explorer
+#echo "Installed IBM MQ Explorer"
 
 # Post installation
 echo "Started Post installation"
 sudo update-locale LANG=en_US.UTF-8 LANGUAGE=en_US # Fix for gnome terminal not opening issue
 sudo apt-get update
+cd /opt
 sudo rm *.tar.gz* && sudo rm *.deb*
 sudo echo "Cleaning Up" &&
 sudo apt-get -f -y install &&
