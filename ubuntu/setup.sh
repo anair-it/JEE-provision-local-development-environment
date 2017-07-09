@@ -64,10 +64,10 @@ echo "Installed Docker Compose"
 echo "Installing Maven 3"
 cd /opt/ && sudo wget http://www-eu.apache.org/dist/maven/maven-3/$MAVEN_VERSION/binaries/apache-maven-$MAVEN_VERSION-bin.tar.gz
 sudo tar -xvzf apache-maven-$MAVEN_VERSION-bin.tar.gz
-sudo sh -c "echo 'M2_HOME=/opt/apache-maven-${MAVEN_VERSION}' >> /etc/profile"
-sudo sh -c "echo 'PATH=${M2_HOME}/bin:${PATH}' >> /etc/profile"
-sudo sh -c "echo 'export M2_HOME' >> /etc/profile"
-sudo sh -c "echo 'export PATH' >> /etc/profile"
+cd /opt/ && sudo ln -s apache-maven-$MAVEN_VERSION maven 
+echo 'export M2_HOME=/opt/maven
+export PATH=${M2_HOME}/bin:${PATH}
+export PATH=${M2_HOME}:${PATH}' > /etc/profile.d/maven.sh
 sudo rm /opt/apache-maven-$MAVEN_VERSION-bin.tar.gz
 mvn -v
 echo "Installed Maven 3"
