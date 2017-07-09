@@ -22,10 +22,9 @@ alternatives --install /usr/bin/jar jar /opt/jdk$JDK_VERSION/bin/jar 2
 alternatives --install /usr/bin/javac javac /opt/jdk$JDK_VERSION/bin/javac 2
 alternatives --set jar /opt/jdk$JDK_VERSION/bin/jar
 alternatives --set javac /opt/jdk$JDK_VERSION/bin/javac
-export JAVA_HOME=/opt/jdk$JDK_VERSION
+echo 'export JAVA_HOME=/opt/jdk$JDK_VERSION
 export JRE_HOME=/opt/jdk$JDK_VERSION/jre
-export PATH=$PATH:/opt/jdk$JDK_VERSION/bin:/opt/jdk$JDK_VERSION/jre/bin
-java -version
+export PATH=${JAVA_HOME}/bin:${PATH}' > /etc/profile.d/java.sh
 echo "Installed Oracle JDK 8"
 
 # Docker CE
@@ -54,6 +53,7 @@ echo "Installing Tomcat"
 cd /opt/ && sudo wget http://supergsego.com/apache/tomcat/tomcat-8/v$TOMCAT_VERSION/bin/apache-tomcat-$TOMCAT_VERSION.tar.gz
 sudo tar -zxvf /opt/apache-tomcat-$TOMCAT_VERSION.tar.gz
 sudo rm /opt/apache-tomcat-$TOMCAT_VERSION.tar.gz
+docker pull tomcat:alpine
 echo "Installed Tomcat"
 
 # Oracle XE

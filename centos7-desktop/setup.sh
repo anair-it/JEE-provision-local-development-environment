@@ -118,6 +118,7 @@ echo "Installing Tomcat"
 cd /opt/ && sudo wget http://supergsego.com/apache/tomcat/tomcat-8/v$TOMCAT_VERSION/bin/apache-tomcat-$TOMCAT_VERSION.tar.gz
 sudo tar -zxvf /opt/apache-tomcat-$TOMCAT_VERSION.tar.gz
 sudo rm /opt/apache-tomcat-$TOMCAT_VERSION.tar.gz
+docker pull tomcat:alpine
 echo "Installed Tomcat"
 
 # Oracle XE
@@ -134,13 +135,13 @@ sudo tar -xvf /vagrant/mq.tar -C /opt/shortcuts/
 echo "Installed IBM Websphere MQ"
 
 # IBM MQ Explorer
-echo "Installing IBM MQ Explorer"
-sudo mkdir /opt/MQ_Explorer
-sudo tar -zxvf /vagrant/ms0t_mqexplorer_9001_linux_x86_64.tar.gz -C /opt/MQ_Explorer && cd /opt/MQ_Explorer
-sudo sed -i 's/LICENSE_ACCEPTED=FALSE/LICENSE_ACCEPTED=TRUE/g' silent_install.resp 
-sudo ./Setup.bin -f silent_install.resp
-cd .. && sudo rm -Rf MQ_Explorer
-echo "Installed IBM MQ Explorer"
+#echo "Installing IBM MQ Explorer"
+#sudo mkdir /opt/MQ_Explorer
+#sudo tar -zxvf /vagrant/ms0t_mqexplorer_9001_linux_x86_64.tar.gz -C /opt/MQ_Explorer && cd /opt/MQ_Explorer
+#sudo sed -i 's/LICENSE_ACCEPTED=FALSE/LICENSE_ACCEPTED=TRUE/g' silent_install.resp 
+#sudo ./Setup.bin -f silent_install.resp
+#cd .. && sudo rm -Rf MQ_Explorer
+#echo "Installed IBM MQ Explorer"
 
 # Post installation
 echo "Started Post installation"

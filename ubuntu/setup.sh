@@ -110,6 +110,7 @@ echo "Installing Tomcat"
 cd /opt/ && sudo wget http://supergsego.com/apache/tomcat/tomcat-8/v$TOMCAT_VERSION/bin/apache-tomcat-$TOMCAT_VERSION.tar.gz
 sudo tar -zxvf /opt/apache-tomcat-$TOMCAT_VERSION.tar.gz
 sudo rm /opt/apache-tomcat-$TOMCAT_VERSION.tar.gz
+docker pull tomcat:alpine
 echo "Installed Tomcat"
 
 # Oracle XE

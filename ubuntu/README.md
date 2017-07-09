@@ -31,13 +31,14 @@ Provision a __Ubuntu 16__ based virtual machine with essential tools and softwar
 8. [Eclipse JEE Oxygen](https://www.eclipse.org/downloads/)
 9. [IntelliJ IDEA CE](https://www.jetbrains.com/idea/features/)
 10. [Tomcat 8](https://tomcat.apache.org/tomcat-8.0-doc/index.html)
-11. Oracle 11 XE as a docker container
-12. IBM Websphere MQ 7.5 server installed in a docker image
-13. IBM MQ Explorer 9
-14. [Postman](https://www.getpostman.com/apps)
-15. [Git](https://git-scm.com/)
-16. [Rabbit VCS - SVN and Git GUI client](http://rabbitvcs.org/)
-17. [Vsftpd FTP server](https://security.appspot.com/vsftpd.html)
+11. Tomcat latest docker container on Alpine Linux
+12. Oracle 11 XE as a docker container
+13. IBM Websphere MQ 7.5 server installed in a docker image
+14. IBM MQ Explorer 9
+15. [Postman](https://www.getpostman.com/apps)
+16. [Git](https://git-scm.com/)
+17. [Rabbit VCS - SVN and Git GUI client](http://rabbitvcs.org/)
+18. [Vsftpd FTP server](https://security.appspot.com/vsftpd.html)
 
 ## Other provisioned tools
 1. Firefox browser

@@ -23,11 +23,12 @@ Provision a __Centos 7__ based virtual machine with essential tools and software
 2. [Docker CE](https://www.docker.com/community-edition)
 3. [Docker compose](https://docs.docker.com/compose/)
 4. [Tomcat 8](https://tomcat.apache.org/tomcat-8.0-doc/index.html)
-5. Oracle 11 XE as a docker container
-6. IBM Websphere MQ 7.5 server installed in a docker image
-7. [Git](https://git-scm.com/)
-8. [Vsftpd FTP server](https://security.appspot.com/vsftpd.html)
-9. Apache HTTP
+5. Tomcat latest docker container on Alpine Linux
+6. Oracle 11 XE as a docker container
+7. IBM Websphere MQ 7.5 server installed in a docker image
+8. [Git](https://git-scm.com/)
+9. [Vsftpd FTP server](https://security.appspot.com/vsftpd.html)
+10. Apache HTTP
 
 ## Setup VM
 - Git clone this project
